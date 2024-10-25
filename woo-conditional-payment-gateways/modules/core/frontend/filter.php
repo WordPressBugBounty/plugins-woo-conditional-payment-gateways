@@ -116,6 +116,9 @@ if (!class_exists("Vg_Payment_Gateways_Conditions_Frontend_Filter")) {
 		public function filter_payment_gateways($available_gateways) {
 
 			global $woocommerce;
+			if(!is_array($available_gateways)){
+				return $available_gateways;
+			}
 			
 			// Don't disable gateways after the order was created and the cart was emptied
 			// Because we already filtered before during the checkout validation and early processing

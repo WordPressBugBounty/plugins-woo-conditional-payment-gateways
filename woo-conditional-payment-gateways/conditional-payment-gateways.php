@@ -4,9 +4,9 @@
   Plugin Name: WooCommerce Conditional Payment Methods
   Plugin URI: https://wpsuperadmins.com/plugins/woocommerce-conditional-payment-gateways/?utm_source=wp-admin&utm_campaign=plugins-list&utm_medium=web
   Description: Enable/disable payment gateways based on cart conditions
-  Version: 1.16.2
+  Version: 1.16.3
   WC requires at least: 3.0
-  WC tested up to: 8.8
+  WC tested up to: 9.3
   Author: WP Super Admins
   Author URI: https://wpsuperadmins.com/?utm_source=wp-admin&utm_campaign=plugins-list&utm_medium=web&utm_term=conditional-payment-gateways
 */
@@ -27,7 +27,7 @@ if ( !class_exists( 'WC_Conditional_Payment_Gateways_Dist' ) ) {
 
         static $dir = __DIR__;
 
-        static $version = '1.16.2';
+        static $version = '1.16.3';
 
         static $name = 'Conditional Payment Methods';
 

@@ -1,8 +1,8 @@
 === WooCommerce Disable Payment Methods based on cart conditions ===
 Contributors: vegacorp,josevega, freemius
 Tags: woocommerce, payment gateways
-Tested up to: 6.5
-Stable tag: 1.16.2
+Tested up to: 6.7
+Stable tag: 1.16.3
 Requires at least: 4.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -91,6 +91,11 @@ The manual installation method involves downloading our plugin and uploading it 
 2. Payment gateway settings
 
 == Changelog ==
+
+= 1.16.3 - 2024-10-24 =
+* CHANGE - Updated dependencies
+* FIX - Compatibility issue with Table Rate Shipping plugin by WooCommerce
+* FIX - Compatibility issue with WPML
 
 = 1.16.2 = 2024-05-20 =
 * CHANGE - Improve the custom fields detection

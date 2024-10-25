@@ -162,6 +162,7 @@ if (!class_exists('VGFP_SDK_Settings_Page')) {
 				case 'select':
 				case 'checkbox':
 				case 'radio':
+					$first_option_value = is_array( $field['options'] ) ? current( array_keys( $field['options'] ) ) : null;
 					if (is_array($value)) {
 						foreach ($value as $value_index => $single_value) {
 							if (!isset($field['options'][$single_value])) {
@@ -170,6 +171,9 @@ if (!class_exists('VGFP_SDK_Settings_Page')) {
 						}
 					} elseif (!isset($field['options'][$value])) {
 						$value = '';
+					}
+					if( $value && is_string( $value ) && is_int( $first_option_value )){
+						$value = (int) $value;
 					}
 					break;
 
@@ -222,13 +226,13 @@ if (!class_exists('VGFP_SDK_Settings_Page')) {
 			// zero chance of editing other site options
 			// and we run this only if the user can manage_options
 
+
 			if (is_multisite() && $this->args['enable_wpmu_mode']) {
 				$options = get_blog_option(1, $this->args['opt_name'], array());
 			}
 			if (empty($options)) {
 				$options = get_option($this->args['opt_name'], array());
 			}
-
 			if (empty($options) || !is_array($options)) {
 				$options = array();
 			}
