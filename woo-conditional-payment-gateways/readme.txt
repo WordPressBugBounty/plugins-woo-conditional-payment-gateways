@@ -2,7 +2,7 @@
 Contributors: vegacorp,josevega, freemius
 Tags: woocommerce, payment gateways
 Tested up to: 6.7
-Stable tag: 1.16.3
+Stable tag: 1.16.4
 Requires at least: 4.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -92,6 +92,9 @@ The manual installation method involves downloading our plugin and uploading it 
 
 == Changelog ==
 
+= 1.16.4 - 2025-01-27 =
+* CHANGE - Update dependencies
+			
 = 1.16.3 - 2024-10-24 =
 * CHANGE - Updated dependencies
 * FIX - Compatibility issue with Table Rate Shipping plugin by WooCommerce
