@@ -1,8 +1,8 @@
-=== WooCommerce Disable Payment Methods based on cart conditions ===
-Contributors: vegacorp,josevega, freemius
+=== Disable Payment Methods based on cart conditions for WooCommerce ===
+Contributors: vegacorp,josevega
 Tags: woocommerce, payment gateways
-Tested up to: 6.7
-Stable tag: 1.16.4
+Tested up to: 6.8
+Stable tag: 1.16.5
 Requires at least: 4.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -92,6 +92,9 @@ The manual installation method involves downloading our plugin and uploading it 
 
 == Changelog ==
 
+= 1.16.5 - 2025-07-10 =
+* FIX - Custom Fields condition doesn't work with the plugin "Checkout Field Editor for WooCommerce" by ThemeHigh in the "Order pay" page
+			
 = 1.16.4 - 2025-01-27 =
 * CHANGE - Update dependencies
 			
