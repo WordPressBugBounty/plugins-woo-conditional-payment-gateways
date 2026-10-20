@@ -1,8 +1,8 @@
 === Disable Payment Methods based on cart conditions for WooCommerce ===
 Contributors: vegacorp,josevega
 Tags: woocommerce, payment gateways
-Tested up to: 6.8
-Stable tag: 1.16.5
+Tested up to: 7.1
+Stable tag: 1.16.6
 Requires at least: 4.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -92,6 +92,10 @@ The manual installation method involves downloading our plugin and uploading it 
 
 == Changelog ==
 
+= 1.16.6 - 2026-10-19 =
+* NEW - Add integration with Woo PayPal Payments
+* CHANGE - Updated Freemius SDK
+			
 = 1.16.5 - 2025-07-10 =
 * FIX - Custom Fields condition doesn't work with the plugin "Checkout Field Editor for WooCommerce" by ThemeHigh in the "Order pay" page
 			

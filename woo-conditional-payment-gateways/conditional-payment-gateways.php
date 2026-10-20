@@ -4,11 +4,12 @@
   Plugin Name: Conditional Payment Methods for WooCommerce
   Plugin URI: https://wpsuperadmins.com/plugins/woocommerce-conditional-payment-gateways/?utm_source=wp-admin&utm_campaign=plugins-list&utm_medium=web
   Description: Enable/disable payment gateways based on cart conditions
-  Version: 1.16.5
+  Version: 1.16.6
   WC requires at least: 3.0
-  WC tested up to: 9.9
+  WC tested up to: 11.2.1
   Author: WP Super Admins
   Author URI: https://wpsuperadmins.com/?utm_source=wp-admin&utm_campaign=plugins-list&utm_medium=web&utm_term=conditional-payment-gateways
+  Requires Plugins: woocommerce
 */
 if ( !defined( 'WCCPG_MAIN_FILE' ) ) {
     define( 'WCCPG_MAIN_FILE', __FILE__ );
@@ -27,7 +28,7 @@ if ( !class_exists( 'WC_Conditional_Payment_Gateways_Dist' ) ) {
 
         static $dir = __DIR__;
 
-        static $version = '1.16.5';
+        static $version = '1.16.6';
 
         static $name = 'Conditional Payment Methods';
 
@@ -80,6 +81,10 @@ if ( !class_exists( 'WC_Conditional_Payment_Gateways_Dist' ) ) {
             $rotate_gateways_path = __DIR__ . '/inc/rotate-gateways/rotate-payment-methods.php';
             if ( file_exists( $rotate_gateways_path ) ) {
                 require_once $rotate_gateways_path;
+            }
+            $woo_paypal = __DIR__ . '/inc/integrations/woo-paypal-payments.php';
+            if ( file_exists( $woo_paypal ) ) {
+                require_once $woo_paypal;
             }
             add_action( 'before_woocommerce_init', function () {
                 if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
